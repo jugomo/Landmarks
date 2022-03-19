@@ -2,20 +2,22 @@
 //  ContentView.swift
 //  Landmarks
 //
-//  Created by julio on 09/09/2019.
-//  Copyright © 2019 julio. All rights reserved.
+//  Created by jugomo on 19/3/22.
 //
 
 import SwiftUI
 
+// https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        LandmarkList()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }
