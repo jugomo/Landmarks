@@ -10,8 +10,27 @@ import SwiftUI
 // https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
 
 struct ContentView: View {
+    @State private var selection: Tab = .featured
+
+    enum Tab {
+        case featured
+        case list
+    }
+
     var body: some View {
-        LandmarkList()
+        TabView(selection: $selection) {
+            CategoryHome()
+                .tag(Tab.featured)
+                .tabItem {
+                    Label("Featured", systemImage: "star")
+                }
+
+            LandmarkList()
+                .tag(Tab.list)
+                .tabItem {
+                    Label("List", systemImage: "list.bullet")
+                }
+        }
     }
 }
 

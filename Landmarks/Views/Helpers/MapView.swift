@@ -10,16 +10,16 @@ import MapKit
 
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
-    
+
     @State private var region = MKCoordinateRegion()
-    
+
     var body: some View {
         Map(coordinateRegion: $region)
             .onAppear {
                 setRegion(coordinate)
             }
     }
-    
+
     /// Update the region based on a coordinate value
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
         region = MKCoordinateRegion(

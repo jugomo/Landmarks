@@ -10,7 +10,7 @@ import SwiftUI
 struct FavouriteButton: View {
     /// because use binding, changes made in this view is propagate back to the data source
     @Binding var isSet: Bool
-    
+
     var body: some View {
         Button {
             isSet.toggle()
