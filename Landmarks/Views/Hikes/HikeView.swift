@@ -18,6 +18,8 @@ extension AnyTransition {
 
 struct HikeView: View {
     var hike: Hike
+    
+    /// is a value that can change over time and affects to the view's behavior
     @State private var showDetail = true
 
     var body: some View {

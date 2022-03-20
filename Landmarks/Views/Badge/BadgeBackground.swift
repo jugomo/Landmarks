@@ -63,6 +63,6 @@ struct BadgeBackground: View {
 struct BadgeBackground_Previews: PreviewProvider {
     static var previews: some View {
         BadgeBackground()
-.previewInterfaceOrientation(.portrait)
+            .previewInterfaceOrientation(.portrait)
     }
 }

@@ -10,13 +10,14 @@ import SwiftUI
 // https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
 
 struct ContentView: View {
+    /// is a value that can change over time and affects to the view's behavior
     @State private var selection: Tab = .featured
-
+    
     enum Tab {
         case featured
         case list
     }
-
+    
     var body: some View {
         TabView(selection: $selection) {
             CategoryHome()

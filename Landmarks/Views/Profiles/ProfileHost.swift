@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileHost: View {
+    /// is a value that can change over time and affects to the view's behavior
     @State private var draftProfile = Profile.default
 
     /// create a copy to avoid updating the global app state before confirming any edits

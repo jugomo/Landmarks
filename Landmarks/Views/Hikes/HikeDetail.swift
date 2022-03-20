@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HikeDetail: View {
     let hike: Hike
+    
+    /// is a value that can change over time and affects to the view's behavior
     @State var dataToShow = \Hike.Observation.elevation
 
     var buttons = [
