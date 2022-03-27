@@ -17,5 +17,10 @@ struct LandmarksApp: App {
             ContentView()
                 .environmentObject(modelData) // supply the model object to the view hierarchy
         }
+        
+        #if os(watchOS)
+            /// when Apple Watch receives a notification, it looks for a scene in your app associated with the notification's category
+            WKNotificationScene(controller: NotificationController.self, category: "LandmarkNear")
+        #endif
     }
 }
